@@ -7,8 +7,10 @@ def display_board(board)
 end
 
 def valid_move?(board, idx)
-  if idx.class != 
-  
+  if idx.class != "Fixnum"
+    return false
+  end
+
   if idx < 0 || idx > 8
     return false
   end
@@ -18,10 +20,10 @@ end
 
 def position_taken?(board, idx)
   chr = board[idx]
-  if chr == " "
-    return false
+  if chr == "X" || chr == "O"
+    return true
   end
-  true
+  false
 end
 
 def move(board, idx, token = "X")
