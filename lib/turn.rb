@@ -7,6 +7,8 @@ def display_board(board)
 end
 
 def valid_move?(board, idx)
+  if idx.class != 
+  
   if idx < 0 || idx > 8
     return false
   end
