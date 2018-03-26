@@ -46,7 +46,11 @@ def turn(board)
     puts "Please enter 1-9:"
     rtn = gets
     idx = input_to_index(rtn)
-  
+    
+    if Time.now.to_i - tIn > 30
+      break
+    end
+    
     validMove = move(board, idx)
   end
 end
